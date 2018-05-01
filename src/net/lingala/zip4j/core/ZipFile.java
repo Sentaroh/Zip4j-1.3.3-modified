@@ -646,7 +646,8 @@ public class ZipFile {
 	 * @throws ZipException
 	 */
 	public void setPassword(String password) throws ZipException {
-		if (!Zip4jUtil.isStringNotNullAndNotEmpty(password)) {
+//		if (!Zip4jUtil.isStringNotNullAndNotEmpty(password)) {
+		if (password==null || password.length()==0) {
 			throw new NullPointerException();
 		}
 		setPassword(password.toCharArray());
